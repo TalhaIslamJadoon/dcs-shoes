@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="color-scheme" content="light dark" />
+<meta name="color-scheme" content="light" />
 <link rel="icon" href="data:," />
 <title>DCS — Shoes for Every Step | Mandian, Abbottabad (Demo)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
 <style>
 :root{
   --bg:#f6f7fb; --bg2:#eef1f8; --surface:#ffffff; --surface2:#fbfcfe;
@@ -488,6 +488,231 @@ button:disabled,.order-btn.disabled{opacity:.45;cursor:not-allowed;pointer-event
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none}
 }
+
+/* ================================================================
+   DCS v3 IDENTITY — Clean modern tech-store minimal
+   White / graphite, electric blue accent, sharp precise grids,
+   generous whitespace, clinical spec-sheet feel. No gradients,
+   no pills, no cream, no rounded-soft template look.
+   ================================================================ */
+:root{
+  --bg:#f7f8f9; --bg2:#eceff1; --surface:#ffffff; --surface2:#f4f6f7;
+  --ink:#171a1e; --ink2:#3d434b; --muted:#6b7280;
+  --line:#d7dce1;
+  --blue:#0066ff; --cyan:#0066ff; --violet:#0066ff;
+  --grad:#0066ff; --grad-soft:#e3edff;
+  --shadow:0 1px 2px rgba(23,26,30,.06),0 12px 32px rgba(23,26,30,.07);
+  --shadow-sm:0 1px 2px rgba(23,26,30,.05),0 6px 18px rgba(23,26,30,.05);
+  --radius:8px;
+  --font:'Inter',system-ui,sans-serif;
+  --display:'Space Grotesk','Inter',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+body{background:var(--bg);letter-spacing:-.011em}
+.grad-text{background:none;color:var(--blue)}
+.grad-bg{background:var(--blue)}
+h1,h2,h3{letter-spacing:-.03em;font-weight:700}
+.section{padding:5.5rem 0}
+.sec-head{max-width:720px}
+.sec-head p{color:var(--muted)}
+.tag{font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.18em;color:var(--blue)}
+.tag::before{width:34px;height:2px;background:var(--blue);border-radius:0}
+/* sharp corners everywhere — clinical, not soft */
+.btn,.filter-btn,.order-btn,.add-cart-btn,.pill-black,.pill-outline,.stab,.atab,.pay-opt,.mini-btn,.size-box,.order-status-sel,.cart-badge,.tab-badge,.flag-badge,.pre-tag,.offer-pill,.cat-badge,.demo-badge,.ocard .try-mini{border-radius:6px !important}
+.prod-card,.cat-card,.why-card,.review-card,.track-card,.visit-card,.map-card,.stat,.qv-panel,.admin-panel,.admin-item,.cart-item,.wheel-stage,.wheel-info,.rail-stage,.rail-info,.rail-item,.look-card,.studio,.hero-shoe,.rel-card,.of-items,.empty-note{border-radius:8px !important}
+.logo-mark{border-radius:6px;background:var(--blue);box-shadow:none}
+.logo{font-family:var(--display);letter-spacing:.02em;text-transform:uppercase}
+.logo small{font-family:var(--mono);letter-spacing:.22em}
+header{background:rgba(255,255,255,.92);border-bottom:2px solid var(--ink)}
+.nav-links a{border-radius:6px;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.nav-links a:hover{background:var(--grad-soft);color:var(--blue)}
+.btn{font-weight:600;box-shadow:none}
+.btn-grad{background:var(--blue);box-shadow:none}
+.btn-grad:hover{transform:none;background:#0052cc;box-shadow:0 0 0 3px rgba(0,102,255,.22)}
+.btn-grad::after{display:none}
+.btn-ghost{background:#fff;border:1.5px solid var(--ink);box-shadow:none}
+.btn-ghost:hover{transform:none;background:var(--ink);color:#fff}
+.btn-admin{background:var(--ink)}
+.btn-admin:hover{transform:none;background:var(--blue)}
+/* offers strip: graphite spec bar */
+.offers-strip{background:var(--ink);color:#fff}
+.offers-inner .offer-pill{background:transparent;border:1px solid #454c55;backdrop-filter:none;font-family:var(--mono);font-size:.78rem;letter-spacing:.02em}
+.offers-inner .offer-pill b{color:#7db3ff}
+/* hero: blueprint grid, spec-sheet panel, no floating */
+.hero{background:
+  linear-gradient(rgba(23,26,30,.055) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(23,26,30,.055) 1px,transparent 1px),
+  linear-gradient(180deg,#ffffff,#f1f4f6);
+  background-size:44px 44px,44px 44px,100% 100%;padding:4.5rem 0 5.5rem;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(2.5rem,5.8vw,4.2rem);text-transform:none}
+.hero .lead{color:var(--ink2);font-size:1.06rem}
+.hero-meta{gap:0;border:1px solid var(--line);background:#fff;width:fit-content;max-width:100%}
+.hero-meta div{padding:.8rem 1.2rem;border-right:1px solid var(--line)}
+.hero-meta div:last-child{border-right:0}
+.hero-meta div b{font-family:var(--mono);color:var(--blue);font-size:1rem}
+.hero-meta div span{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+.hero-shoe{animation:none;border:1px solid var(--ink);box-shadow:8px 8px 0 rgba(0,102,255,.16);padding:.7rem;background:#fff}
+.hero-shoe img{border-radius:4px !important}
+.hero-chip{animation:none;border-radius:6px;border:1px solid var(--ink);border-left:4px solid var(--blue);backdrop-filter:none;background:#fff;box-shadow:none;font-family:var(--mono);font-size:.78rem}
+.hero-chip small{font-family:var(--font)}
+.hero-chip .dot{border-radius:4px;background:var(--grad-soft)}
+/* marquee: graphite technical ticker */
+.marquee{background:var(--ink)}
+.marquee-track{font-family:var(--mono);font-size:.8rem;letter-spacing:.16em}
+.marquee-track i{color:var(--blue)}
+/* forge sections (wheel / rail / looks): light graphite lab, not cream */
+.forge{background:#eef1f3;color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.forge .sec-head h2{color:var(--ink)}
+.forge .sec-head p{color:var(--muted)}
+.forge .tag{color:var(--blue)}
+.forge .tag::before{background:var(--blue)}
+.forge-label{font-family:var(--mono);color:var(--blue);letter-spacing:.18em}
+.forge-name{color:var(--ink);font-family:var(--display)}
+.pill-black{background:var(--blue);color:#fff}
+.pill-black:hover{background:#0052cc;transform:none}
+.pill-outline{border:1.5px solid var(--ink);color:var(--ink)}
+.pill-outline:hover{background:var(--ink);color:#fff}
+.wheel-stage{background:
+  linear-gradient(rgba(23,26,30,.05) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(23,26,30,.05) 1px,transparent 1px),#fff;
+  background-size:36px 36px,36px 36px,100% 100%;border:1px solid var(--ink)}
+.wheel-ellipse{border-color:#b9c4ce}
+.wheel-floor{background:radial-gradient(50% 50% at 50% 50%,rgba(0,102,255,.14),transparent 70%)}
+.wheel-item img{border-radius:6px;box-shadow:0 10px 22px rgba(23,26,30,.14)}
+.wheel-hint{font-family:var(--mono);color:#8a94a0}
+.wheel-info{background:#fff;border:1px solid var(--line);box-shadow:none}
+.wheel-price,.price{font-family:var(--mono);letter-spacing:-.02em}
+.size-box{border-color:#c3ccd4;background:#fff;color:var(--ink)}
+.size-box:hover,.size-box.sel{border-color:var(--blue);background:var(--blue);color:#fff}
+.wheel-thumbs button{border-radius:6px}
+.wheel-thumbs button.active{border-color:var(--blue)}
+.wheel-counter{font-family:var(--mono)}
+.rail-stage{background:
+  linear-gradient(rgba(23,26,30,.05) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(23,26,30,.05) 1px,transparent 1px),#fff;
+  background-size:36px 36px,36px 36px,100% 100%;border:1px solid var(--ink)}
+.rail-item{background:#fff;border:1px solid #c3ccd4;box-shadow:none}
+.rail-item b{color:var(--ink);font-family:var(--mono);font-size:.64rem;letter-spacing:.06em}
+.rail-item span{color:var(--blue);font-family:var(--mono)}
+.rail-item.spot{box-shadow:0 0 0 2px var(--blue),0 18px 34px rgba(0,102,255,.18)}
+.rail-info{background:#fff;border:1px solid var(--line)}
+.rail-info p{color:var(--muted)}
+.look-card{background:#fff;border:1px solid var(--line);box-shadow:none}
+.look-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--blue)}
+.look-card p{color:var(--muted)}
+.look-card .lk-total{font-family:var(--mono)}
+.look-card.sel{outline:3px solid var(--blue);box-shadow:var(--shadow)}
+/* catalogue: exact grid, flat spec cards */
+.cat-card{box-shadow:none;border:1px solid var(--line)}
+.cat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--blue)}
+.cat-arrow{border-radius:6px;background:var(--ink)}
+.cat-card:hover .cat-arrow{background:var(--blue)}
+.filter-btn{border:1.5px solid var(--line);background:#fff;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.filter-btn:hover{transform:none;border-color:var(--ink)}
+.filter-btn.active{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:none}
+.prod-card{box-shadow:none;border:1px solid var(--line);animation-name:riseIn}
+.prod-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--blue)}
+.prod-card .demo-badge{background:var(--ink);border-radius:4px !important;font-family:var(--mono)}
+.prod-card .cat-badge{background:var(--blue);font-family:var(--mono);letter-spacing:.05em}
+.prod-body h3{font-size:.98rem}
+.prod-meta{font-family:var(--mono);font-size:.74rem;letter-spacing:.01em}
+.price small{font-family:var(--mono)}
+.order-btn{background:var(--blue);box-shadow:none}
+.order-btn:hover{transform:none;background:#0052cc}
+.add-cart-btn{border:1.5px solid var(--ink)}
+.add-cart-btn:hover{background:var(--ink);color:#fff}
+.shop-tools input[type="search"],.shop-tools select{border-radius:6px;border:1.5px solid var(--line);background:#fff}
+.shop-tools input[type="search"]:focus,.track-form input:focus{outline:2px solid var(--blue);outline-offset:1px}
+.empty-note{background:#fff}
+/* try-on studio: bright lab, grid floor, blue spec word */
+.tryon{background:#fff}
+.studio{background:
+  linear-gradient(rgba(23,26,30,.05) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(23,26,30,.05) 1px,transparent 1px),
+  linear-gradient(180deg,#ffffff,#eef2f5);
+  background-size:36px 36px,36px 36px,100% 100%;border:1px solid var(--ink);box-shadow:8px 8px 0 rgba(0,102,255,.12);color:var(--ink)}
+.studio-word{font-family:var(--mono);color:rgba(0,102,255,.08);letter-spacing:0}
+.stab{border:1.5px solid #c3ccd4;background:#fff;backdrop-filter:none;color:var(--ink2);box-shadow:none;font-family:var(--mono);font-size:.76rem;letter-spacing:.04em}
+.stab:hover{transform:none;border-color:var(--ink)}
+.stab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.ocard{background:rgba(255,255,255,.94);backdrop-filter:none;border:1px solid #c3ccd4;border-radius:8px;box-shadow:0 8px 20px rgba(23,26,30,.10);color:var(--ink)}
+.ocard img{border-radius:4px}
+.ocard span{color:var(--blue);font-family:var(--mono)}
+.ocard .try-mini{background:var(--ink)}
+.ocard.selected{outline:2px solid var(--blue);box-shadow:0 0 0 3px rgba(0,102,255,.18)}
+.tray{background:#fff;backdrop-filter:none;border:1px solid var(--ink);border-radius:8px !important;box-shadow:none;color:var(--ink)}
+.tray .tray-ico{border-radius:6px;background:var(--blue)}
+.tray img{border-radius:4px}
+.tray .tray-info span{color:var(--muted);font-family:var(--mono);font-size:.72rem}
+.floor-gloss{background:linear-gradient(180deg,transparent,rgba(0,102,255,.06))}
+/* why / stats: graphite data panels */
+.why-card{box-shadow:none;border:1px solid var(--line)}
+.why-card:hover{transform:translateY(-3px);border-color:var(--blue)}
+.why-card .wic{border-radius:6px;background:var(--grad-soft)}
+.stat{background:var(--ink);box-shadow:none}
+.stat::after{display:none}
+.stat b{font-family:var(--mono);color:#7db3ff}
+.stat span{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+/* visit / tracking / reviews */
+.visit-card,.track-card,.review-card{box-shadow:none;border:1px solid var(--line)}
+.visit-row .vic{border-radius:6px;background:var(--grad-soft)}
+.visit-row b{font-family:var(--mono);color:var(--blue)}
+.map-card{background:#eef1f3;border:1px solid var(--ink)}
+.map-card .pin{animation:none}
+.track-form input{border-radius:6px;background:#fff}
+.tstep.done .tdot{background:var(--blue)}
+.tstep.done::before{background:var(--blue)}
+.review-card .stars{color:var(--blue)}
+/* footer: graphite, unchanged credit line */
+footer{background:#101216}
+.foot-credit{font-family:var(--mono);font-size:.8rem;letter-spacing:.02em}
+.float-call{background:var(--blue);box-shadow:0 10px 24px rgba(0,102,255,.35);animation:none;border-radius:10px}
+.float-call::before{border-color:rgba(0,102,255,.5)}
+/* modals + order form: white clinical panels (were cream) */
+.qv-overlay{background:rgba(16,18,22,.6)}
+.qv-panel{background:#fff;color:var(--ink)}
+.qv-head{border-bottom:2px solid var(--ink)}
+.qv-close{background:var(--ink);color:#fff;border-radius:6px}
+.qv-body p{color:var(--muted)}
+.qv-dot{box-shadow:0 0 0 1.5px #c3ccd4}
+.qv-dot.sel{box-shadow:0 0 0 2.5px var(--blue)}
+.look-side{background:var(--surface2);border-left-color:var(--line)}
+.look-piece{border-bottom-color:var(--line)}
+.look-piece .lp-info span{color:var(--muted)}
+.look-piece .lp-add{background:var(--blue);color:#fff;border-radius:6px}
+.look-piece .lp-toggle{border-color:var(--ink);color:var(--ink);border-radius:6px}
+.ofield label{font-family:var(--mono);color:var(--blue)}
+.ofield input,.ofield select,.ofield textarea{border-color:var(--line);background:#fff;color:var(--ink);border-radius:6px}
+.of-items{background:var(--surface2);border-color:var(--line)}
+.of-items .ofi-row{border-bottom-color:var(--line)}
+.of-note-line{color:var(--ink2);background:var(--grad-soft)}
+.pay-opt{border-color:var(--line);background:#fff;color:var(--ink)}
+.pay-opt.sel{background:var(--ink);color:#fff;border-color:var(--ink)}
+.sg-table th,.sg-table td{border-bottom-color:var(--line)}
+.sg-table th{font-family:var(--mono);color:var(--blue)}
+.rel-card{background:#fff;border-color:var(--line);color:var(--ink)}
+.rel-card span{color:var(--muted)}
+.rel-add{background:var(--blue);border-radius:6px}
+#qvSizeGuide{color:var(--blue) !important}
+/* admin: graphite header, blue accents */
+.admin-overlay{background:rgba(16,18,22,.6)}
+.admin-head{background:var(--ink)}
+.admin-close{border-radius:6px}
+.atab.active{background:var(--blue)}
+.afield input,.afield select,.afield textarea{border-radius:6px}
+.admin-note{background:var(--grad-soft)}
+.pin-box input{border-radius:6px}
+.cart-badge,.tab-badge{background:var(--blue)}
+.flag-badge.pre{background:#b45309}
+.tstep .tdot{border-radius:8px}
+@media (max-width:760px){
+  .hero-meta{width:100%}
+  .hero-meta div{flex:1;padding:.7rem .8rem}
+  .ocard,.tray,.stab{backdrop-filter:none}
+  .prod-card,.cat-card,.why-card{box-shadow:none}
+  .hero-shoe{box-shadow:5px 5px 0 rgba(0,102,255,.16)}
+  .studio{box-shadow:5px 5px 0 rgba(0,102,255,.12)}
+}
 </style>
 </head>
 <body>
@@ -518,9 +743,9 @@ button:disabled,.order-btn.disabled{opacity:.45;cursor:not-allowed;pointer-event
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="tag anim">Footwear for the whole family</span>
-        <h1 class="anim a2">Every step feels better at <span class="grad-text shop-name">DCS</span>.</h1>
-        <p class="lead anim a3">Sneakers, formal shoes, Peshawari chappal, school shoes, sandals and slippers — quality pairs at honest prices, right here in Mandian, Abbottabad. Try them on screen first, then visit the shop.</p>
+        <span class="tag anim">DCS / Footwear System · Mandian</span>
+        <h1 class="anim a2">Precision footwear. <span class="grad-text">Engineered</span> for every step at <span class="grad-text shop-name">DCS</span>.</h1>
+        <p class="lead anim a3">Sneakers, formal shoes, Peshawari chappal, school shoes, sandals and slippers — specified, sized and priced with total clarity, right here in Mandian, Abbottabad. Check the specs on screen first, then visit the shop.</p>
         <div class="hero-cta anim a4">
           <a class="btn btn-grad" href="#tryon">Try Shoes On →</a>
           <a class="btn btn-ghost" href="#catalogue">Browse Catalogue</a>
@@ -607,7 +832,7 @@ button:disabled,.order-btn.disabled{opacity:.45;cursor:not-allowed;pointer-event
         <p>Run your eye along the curve. Hover or tap a pair to spotlight it — the rest step back — and its story appears below.</p>
       </div>
       <div class="rail-stage" id="railStage">
-        <svg class="rail-curve" viewBox="0 0 1000 340" preserveAspectRatio="none" aria-hidden="true"><path d="M -20 250 Q 500 60 1020 250" fill="none" stroke="#d8ccab" stroke-width="2"/></svg>
+        <svg class="rail-curve" viewBox="0 0 1000 340" preserveAspectRatio="none" aria-hidden="true"><path d="M -20 250 Q 500 60 1020 250" fill="none" stroke="#0066ff" stroke-width="2"/></svg>
       </div>
       <div class="rail-info" id="railInfo"></div>
     </div>
@@ -622,7 +847,7 @@ button:disabled,.order-btn.disabled{opacity:.45;cursor:not-allowed;pointer-event
         <p>Pick a category, tap any floating card, and the model's shoes change instantly. Colours in the tray below follow the pair you choose.</p>
       </div>
       <div class="studio">
-        <div class="studio-word" aria-hidden="true">STEP</div>
+        <div class="studio-word" aria-hidden="true">DCS·01</div>
         <div class="studio-tabs" id="studioTabs" role="tablist" aria-label="Try-on categories"></div>
         <div class="stage" id="stage">
           <div class="model-shadow"></div>
