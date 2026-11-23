@@ -714,6 +714,28 @@ footer{background:#101216}
   .studio{box-shadow:5px 5px 0 rgba(0,102,255,.12)}
 }
 </style>
+<style>
+/* TO-FIX 2026-11-24: mobile try-on repair */
+
+@media(max-width:700px){
+  /* Tray: let a long shoe name wrap instead of being cut off with an ellipsis */
+  .tray .tray-info b{white-space:normal;overflow:visible;text-overflow:clip}
+}
+
+</style>
+<style>
+/* TO-FIX2 2026-11-24: mobile try-on restack (shoes) */
+
+@media(max-width:640px){
+  /* Mobile studio stacks: model first, then the orbit in its own band —
+     cards no longer cover the model or slide off the stage edges. */
+  .stage{height:auto;display:flex;flex-direction:column;align-items:center}
+  .model-wrap{position:relative;left:auto;top:auto;transform:none;order:1;height:330px}
+  .orbit{position:relative;inset:auto;order:2;width:100%;height:190px;margin-top:8px}
+  .floor-gloss{display:none}
+}
+
+</style>
 </head>
 <body>
 
@@ -1547,8 +1569,11 @@ function orbitStep(){
   var stage = document.getElementById("stage");
   if(stage && orbitCards.length){
     var w = stage.clientWidth, h = stage.clientHeight;
+    var orbEl = document.getElementById("orbit"); if (orbEl && orbEl.clientHeight) { w = orbEl.clientWidth; h = orbEl.clientHeight; }
     var cx = w / 2, cy = h / 2 - 6;
     var rx = Math.max(w / 2 - 92, 120), ry = 118;
+    rx = Math.min(rx, Math.max(48, w / 2 - 76)); /* keep orbiting cards inside the stage on narrow screens */
+    ry = Math.min(ry, Math.max(16, h / 2 - 80)); /* and inside the band vertically */
     if(!orbitPaused && !reduced) orbitAngle += 0.0016;
     orbitCards.forEach(function(c){
       var a = c.phase + orbitAngle;
